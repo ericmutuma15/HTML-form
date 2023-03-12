@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>Form Submission</title>
+    <header>
+        <h1>Fill in the form</h1>
+    </header>
+    
+ </head>   
+    <body >
+        <div>
+        
+         <form action="authenticate.php" method="post" onsubmit="myfunction()">
+            
+                <legend>Details</legend>
+                <fieldset>
+                <label for="fname">First Name:</label><br>
+                <input type="text" id="fname" name="fname" placeholder="John"  required><br>
+
+                <label for="lname">Last Name:</label><br>
+                <input type="text" id="lname" name="lname" placeholder="Doe" required>
+                </fieldset><br>
+                
+                <fieldset>
+                <label for="e-mail">E-Mail:</label><br>
+                <input type="email" id="e-mail" name="e-mail" placeholder="example@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
+                
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="0700-111-222" required>
+                </fieldset><br>
+                
+                <fieldset>
+                <input type="radio" id="male" name="sex" value="male">
+                <label for="male">Male</label><br>
+
+                <input type="radio" id="female" name="sex" value="female">
+                <label for="female">Female</label>
+                </fieldset>
+                <br>
+
+                <label for="pwd">Password:</label><br>
+                <input type="password" id="pwd" name="pwd"><br>
+
+                <label for="pwd">Repeat Password:</label><br>
+                <input type="password" id="pwd" name="pwd"><br>
+
+                <input type="submit" value="Submit" >
+          
+                <script>
+                    function myfunction() {
+                      alert("The form was submitted");
+                                 }
+                  </script>
+         </form>
+        
+        
+        </div>
+        
+    </body>
+</html>
